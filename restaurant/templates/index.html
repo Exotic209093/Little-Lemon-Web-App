@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Lemon Restaurant</title>
+  <style>
+    :root {
+      --lemon: #f4ce14;
+      --olive: #495e57;
+      --cream: #edefee;
+      --ink: #333333;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--olive);
+      color: var(--cream);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+    }
+    header h1 span { color: var(--lemon); }
+    header p { margin: 0.5rem 0 0; opacity: 0.85; }
+    main { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      margin-bottom: 1.5rem;
+    }
+    h2 { color: var(--olive); margin-top: 0; }
+    code {
+      background: #2b2b2b;
+      color: #f4ce14;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.4rem; }
+    footer { text-align: center; padding: 1.5rem; color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Little <span>Lemon</span></h1>
+    <p>Mediterranean cuisine, delivered with warmth.</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>
+        Little Lemon is a charming neighbourhood bistro that serves simple food
+        with a modern Mediterranean twist. This page is the static homepage
+        served by Django to satisfy the capstone requirement.
+      </p>
+    </section>
+    <section class="card">
+      <h2>Available APIs</h2>
+      <ul>
+        <li><code>GET /api/menu/</code> &mdash; list menu items (public)</li>
+        <li><code>POST /api/menu/</code> &mdash; create a menu item</li>
+        <li><code>GET/PUT/DELETE /api/menu/&lt;id&gt;/</code> &mdash; manage a single item</li>
+        <li><code>/api/booking/tables/</code> &mdash; CRUD bookings (auth required)</li>
+        <li><code>POST /auth/users/</code> &mdash; register a new user (Djoser)</li>
+        <li><code>POST /auth/token/login/</code> &mdash; obtain auth token (Djoser)</li>
+      </ul>
+    </section>
+  </main>
+  <footer>&copy; Little Lemon &middot; Django capstone</footer>
+</body>
+</html>
